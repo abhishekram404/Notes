@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import AppBar from "./components/AppBar";
+import FloatingActionButton from "./components/FloatingActionButton";
 import NotesList from "./components/NotesList";
 import ThemeContext from "./utils/ThemeContext";
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
       <View style={styles.container}>
         <AppBar />
         <NotesList />
+        <FloatingActionButton />
         <StatusBar style="auto" />
       </View>
     </ThemeContext.Provider>
