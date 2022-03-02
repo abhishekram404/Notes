@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import AppBar from "./components/AppBar";
+import NotesList from "./components/NotesList";
 import ThemeContext from "./utils/ThemeContext";
 export default function App() {
   const theme = {
@@ -16,6 +17,7 @@ export default function App() {
     <ThemeContext.Provider value={theme}>
       <View style={styles.container}>
         <AppBar />
+        <NotesList />
         <StatusBar style="auto" />
       </View>
     </ThemeContext.Provider>
@@ -26,6 +28,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // paddingTop: 50,
   },
 });
